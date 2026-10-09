@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oranium Full Stack Course</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K4L28Z9R');</script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4L28Z9R" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav>
+        <div class="container-fluid nav-container bg-white">
+            <div class="container  ">
+                <div class="d-flex align-items-center justify-content-center justify-content-md-between">
+                    <div class="">
+                        <img src="./images/Container.webp" class="nav-logo h-100 w-100 object-fit-cover"
+                            alt="Oranium Logo" />
+                    </div>
+                    <div class="d-none d-md-flex align-items-center gap-2 gap-md-3">
+                        <a href="#admissionform"
+                            class="btn btn-outline-cta d-flex align-items-center gap-2 text-black text-center fw-medium font-plus-jakarta-sans text-decoration-none">Request
+                            Callback<i class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="floating-actions">
+        <!-- Direct Call Button -->
+        <a href="tel:8072363772" class="btn-float btn-call bg-sixth" aria-label="Call Us">
+            <i class="bi bi-telephone-fill"></i>
+        </a>
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/8072363772?text=Hello,%20I%E2%80%99m%20interested%20in%20joining%20Oranium%20Tech.%20Please%20share%20the%20course%20details,%20fee%20structure,%20placement%20support%20and%20upcoming%20batch%20schedules.%20Kindly%20connect%20me%20with%20a%20counsellor."
+            class="btn-float btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+    <main>
+        <div class="container-fluid px-md-4 my-2">
+            <section class="hero hero-container position-relative overflow-hidden" id="hero">
+                <div class="container">
+                    <div class="row hero-row align-items-center g-0">
+                        <div class="col-lg-7 ">
+                            <div class="hero-content d-flex flex-column gap-4">
+                                <span class=" hero-badge bg-white d-flex align-items-center gap-2 w-fit-content gap-2
+                                fst-italic text-secondary wow animate__animated animate__fadeInLeft" delay="0.2s">
+                                    <img src="./images/hotel_class.svg" />
+                                    Full Stack Developer Course in Chennai
+                                </span>
+
+                                <h1 class="hero-title font-outfit fw-bold text-white mb-0  wow animate__animated animate__fadeInLeft"
+                                    delay="0.2s" data-anim>
+                                    Learn. Build. Become a Full Stack Developer.
+                                </h1>
+
+                                <p class="hero-text text-tertiary font-plus-jakarta-sans  wow animate__animated animate__fadeInLeft"
+                                    delay="0.3s" data-anim>
+                                    Work on real-world projects through hands-on training at Oranium Tech.
+                                </p>
+
+                                <div class="d-flex flex-wrap gap-3 align-items-center  wow animate__animated animate__fadeInLeft"
+                                    delay="0.3s" data-anim>
+                                    <a href="#admissionform"
+                                        class="btn btn-demo bg-purple text-white text-center font-plus-jakarta-sans fw-bold  w-100">Book
+                                        a free demo</a>
+                                    <a href="#admissionform"
+                                        class="btn btn-program text-white text-center font-plus-jakarta-sans fw-bold w-100">Find
+                                        your program</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 d-flex justify-content-lg-end align-self-lg-start pt-lg-4 pe-lg-4">
+                            <form class="form-card w-100 p-4 rounded-4 font-plus-jakarta-sans " id="admissionform">
+                                <h2 class="font-outfit fw-bold mb-1 fs-4">Apply Now</h2>
+                                <p class=" mb-4 fs-6">Fill in your details to get started.</p>
+
+                                <!-- Name Field -->
+                                <div class="mb-3">
+                                    <label for="name" class="form-label fs-7 fw-semibold ">Full
+                                        Name<span>*</span></label>
+                                    <input type="text" class="form-control form-input" id="name" name="Name"
+                                        placeholder="Enter your full name" required>
+                                </div>
+
+                                <!-- Email Field -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label fs-7 fw-semibold ">Email
+                                        Address<span>*</span></label>
+                                    <input type="email" class="form-control form-input" id="email" name="Email"
+                                        placeholder="name@example.com" required>
+                                </div>
+
+                                <!-- Phone Field -->
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label fs-7 fw-semibold ">Phone
+                                        Number<span>*</span></label>
+                                    <input type="tel" class="form-control form-input" id="phone" maxlength="10"
+                                        pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                                        name="Phone" placeholder="10-digit mobile number" required>
+                                </div>
+                                <!-- Hidden Fields for Date & Page URL -->
+                                <input type="hidden" id="formDate" name="Date">
+                                <input type="hidden" id="formPageUrl" name="PageUrl">
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-submit w-100 mt-2 py-3 fw-bold text-uppercase"
+                                    id="submitBtn">
+                                    Submit Application
+                                </button>
+
+                                <!-- Status Message -->
+                                <div id="formResponse" class="mt-3 text-center fs-7 d-none"></div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <section class="stats-section bg-white container-fluid" id="statsSection">
+        <div class="stats-track" id="statsTrack">
+            <div class="stat-set d-flex">
+                <div class="stat-item d-flex gap-2 gap-md-3">
+                    <span class="stat-number text-secondary font-plus-jakarta-sans fw-bold">28%</span>
+                    <span class="stat-label text-secondary font-plus-jakarta-sans fw-semibold text-uppercase">Students
+                        employed<br>before
+                        graduation</span>
+                </div>
+                <div class="stat-item d-flex gap-2 gap-md-3">
+                    <span class="stat-number text-secondary font-plus-jakarta-sans fw-bold">83%</span>
+                    <span class="stat-label text-secondary font-plus-jakarta-sans fw-semibold text-uppercase">Graduates
+                        employed within 6
+                        months</span>
+                </div>
+                <div class="stat-item d-flex gap-2 gap-md-3">
+                    <span class="stat-number text-secondary font-plus-jakarta-sans fw-bold">96%</span>
+                    <span class="stat-label text-secondary font-plus-jakarta-sans fw-semibold text-uppercase">Graduates
+                        employed within 9
+                        months</span>
+                </div>
+                <div class="stat-item d-flex gap-2 gap-md-3">
+                    <span class="stat-number text-secondary font-plus-jakarta-sans fw-bold">98%</span>
+                    <span class="stat-label text-secondary font-plus-jakarta-sans fw-semibold text-uppercase">Graduates
+                        employed within 12
+                        months</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid why-section standard-container" id="whySection">
+        <div class="container">
+            <div
+                class="row align-items-center justify-content-center justify-content-between why-row-gap wow animate__animated animate__fadeInUp g-5 g-md-0">
+
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column why-left-gap">
+                        <div class="d-flex flex-column gap-3 gap-md-4 " data-anim="fadeInUp" delay="0.1s">
+                            <div class="d-flex flex-column gap-2">
+                                <span
+                                    class="why-eyebrow animate__animated animate__fadeInUp text-quinary font-plus-jakarta-sans">
+                                    The experience
+                                </span>
+                                <h2
+                                    class="why-title animate__animated animate__fadeInUp text-white font-outfit fw-bold">
+                                    Why Oranium Tech?
+                                </h2>
+                            </div>
+
+                            <div class="bar-indicators d-flex align-items-center gap-2 animate__animated animate__fadeInUp"
+                                id="barIndicators">
+                                <button type="button" class="active" data-bs-target="#whyCarousel" data-bs-slide-to="0"
+                                    aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#whyCarousel" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#whyCarousel" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                        </div>
+
+                        <div id="textSlides" class="text-slides-wrapper">
+
+                            <!-- Slide 1 -->
+                            <div class="text-slide d-flex flex-column gap-3 gap-md-4 active  mb-2">
+                                <h3 class="slide-heading text-white fw-bold font-outfit">Turn ambition into action</h3>
+                                <div class="feature d-flex gap-3">
+                                    <span class="feature-icon"><img src="/images/starIcon.svg" height="20" width="20"
+                                            alt="icon" /></span>
+                                    <div class="d-flex flex-column gap-1">
+                                        <h4 class="text-white font-plus-jakarta-sans fw-bold feature-head mb-0">✓
+                                            Hands-On Training</h4>
+                                        <p class="text-quatery font-plus-jakarta-sans feature-para mb-0">Learn by doing,
+                                            not just watching.</p>
+                                    </div>
+                                </div>
+                                <div class="feature d-flex gap-3">
+                                    <span class="feature-icon"><img src="/images/starIcon.svg" height="20" width="20"
+                                            alt="icon" /></span>
+                                    <div class="d-flex flex-column gap-1">
+                                        <h4 class="text-white font-plus-jakarta-sans fw-bold feature-head mb-0">✓ Real
+                                            Projects</h4>
+                                        <p class="text-quatery font-plus-jakarta-sans feature-para mb-0">Build projects
+                                            you can showcase.</p>
+                                    </div>
+                                </div>
+                                <a href="#admissionform"
+                                    class="btn btn-demo text-purple-shade text-center text-plus-jakarta-sans fw-semibold bg-white w-fit-content d-flex align-items-center gap-2">
+                                    Book a Free Demo <i class="bi bi-arrow-right-short"></i>
+                                </a>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="text-slide d-flex flex-column gap-3 gap-md-4 mb-2">
+                                <h3 class="slide-heading text-white fw-bold font-outfit">Learn from Industry Experts
+                                </h3>
+                                <div class="feature d-flex gap-3">
+                                    <span class="feature-icon"><img src="/images/starIcon.svg" height="20" width="20"
+                                            alt="icon" /></span>
+                                    <div class="d-flex flex-column gap-1">
+                                        <h4 class="text-white font-plus-jakarta-sans fw-bold feature-head mb-0">✓ Expert
+                                            Mentors</h4>
+                                        <p class="text-quatery font-plus-jakarta-sans feature-para mb-0">Get guidance
+                                            from experienced professionals.</p>
+                                    </div>
+                                </div>
+                                <div class="feature d-flex gap-3">
+                                    <span class="feature-icon"><img src="/images/starIcon.svg" height="20" width="20"
+                                            alt="icon" /></span>
+                                    <div class="d-flex flex-column gap-1">
+                                        <h4 class="text-white font-plus-jakarta-sans fw-bold feature-head mb-0">✓ 1-on-1
+                                            Support</h4>
+                                        <p class="text-quatery font-plus-jakarta-sans feature-para mb-0">Clear your
+                                            doubts with personalized sessions.</p>
+                                    </div>
+                                </div>
+                                <a href="#admissionform"
+                                    class="btn btn-demo text-purple-shade text-center text-plus-jakarta-sans fw-semibold bg-white w-fit-content d-flex align-items-center gap-2">
+                                    Book a Free Demo <i class="bi bi-arrow-right-short"></i>
+                                </a>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="text-slide d-flex flex-column gap-3 gap-md-4 mb-2">
+                                <h3 class="slide-heading text-white fw-bold font-outfit">Launch Your Tech Career</h3>
+                                <div class="feature d-flex gap-3">
+                                    <span class="feature-icon"><img src="/images/starIcon.svg" height="20" width="20"
+                                            alt="icon" /></span>
+                                    <div class="d-flex flex-column gap-1">
+                                        <h4 class="text-white font-plus-jakarta-sans fw-bold feature-head mb-0">✓
+                                            Placement Assistance</h4>
+                                        <p class="text-quatery font-plus-jakarta-sans feature-para mb-0">Resume
+                                            building,
+                                            mock interviews, and job leads.</p>
+                                    </div>
+                                </div>
+                                <div class="feature d-flex gap-3">
+                                    <span class="feature-icon"><img src="/images/starIcon.svg" height="20" width="20"
+                                            alt="icon" /></span>
+                                    <div class="d-flex flex-column gap-1">
+                                        <h4 class="text-white font-plus-jakarta-sans fw-bold feature-head mb-0">✓
+                                            Recognized Certificate</h4>
+                                        <p class="text-quatery font-plus-jakarta-sans feature-para mb-0">Validate your
+                                            skills with industry-standard certification.</p>
+                                    </div>
+                                </div>
+                                <a href="#admissionform"
+                                    class="btn btn-demo text-purple-shade text-center text-plus-jakarta-sans fw-semibold bg-white w-fit-content d-flex align-items-center gap-2">
+                                    Book a Free Demo <i class="bi bi-arrow-right-short"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div id="whyCarousel" class="carousel slide carousel-fade why-carousel" data-bs-ride="carousel"
+                        data-bs-interval="5000" data-bs-pause="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item overflow-hidden active animate__animated animate__fadeIn">
+                                <img src="./images/image 18.webp" class="h-100 w-100 object-fit-cover"
+                                    alt="Hands-on training">
+                            </div>
+                            <div class="carousel-item overflow-hidden animate__animated animate__fadeIn">
+                                <img src="./images/image 20.webp" class="h-100 w-100 object-fit-cover"
+                                    alt="Expert mentors">
+                            </div>
+                            <div class="carousel-item overflow-hidden animate__animated animate__fadeIn">
+                                <img src="./images/image 21.webp" class="h-100 w-100 object-fit-cover"
+                                    alt="Career launch">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid learn-section standard-container">
+        <div class="container d-flex flex-column learn-gap">
+            <div class="row learn-gap align-items-stretch justify-content-center justify-content-md-between">
+                <div class="col-md-7">
+                    <div class="d-flex flex-column learheading-gap h-100 wow animate__animated animate__fadeInLeft"
+                        data-anim="fadeInUp" delay="0.1s">
+                        <h2 class="text-seventh text-uppercase font-outfit fw-medium learn-head">WHat you’ll
+                            <span class="text-sixth">learn</span>
+                        </h2>
+                        <ul class="list-unstyled d-flex align-items-center gap-2 font-plus-jakarta-sans fw-semibold ">
+                            <li class="text-list">Frontend </li>
+                            <li class="text-green"><i class="bi bi-arrow-right-short"></i></li>
+                            <li class="text-list">Backend</li>
+                            <li class="text-green"><i class="bi bi-arrow-right-short"></i></li>
+                            <li class="text-list">Database</li>
+                            <li class="text-green"><i class="bi bi-arrow-right-short"></i></li>
+                            <li class="text-list"> Projects</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="h-100 d-flex flex-column justify-content-end gap-3 gap-md-4 wow animate__animated animate__fadeInRight"
+                        data-anim="fadeInUp" delay="0.1s">
+                        <p class="text-eighth font-plus-jakarta-sans learn-right-para">A practical, step-by-step path
+                            from your first
+                            line of code to
+                            portfolio-ready full-stack
+                            projects.</p>
+                        <ul class="list-unstyled d-flex align-items-center gap-2 font-plus-jakarta-sans fw-semibold ">
+                            <li
+                                class="text-list text-seventh font-plus-jakarta-sans text-uppercase learn-eyebrow fw-bold ">
+                                Learn
+                            </li>
+                            <li class="text-list"><i class="bi bi-arrow-right-short"></i></li>
+                            <li
+                                class="text-list text-seventh font-plus-jakarta-sans text-uppercase learn-eyebrow fw-bold ">
+                                Build
+                            </li>
+                            <li class="text-list"><i class="bi bi-arrow-right-short"></i></li>
+                            <li
+                                class="bg-seventh px-2 py-1 font-plus-jakarta-sans text-uppercase fw-bold learn-eyebrow text-white rounded-pill learn-btn">
+                                Showcase</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-3 gap-md-0">
+                <div class="row wow animate__animated animate__fadeInUp" data-anim="fadeInUp" delay="0.1s">
+                    <div class="col-lg-5 " data-animate="animate__fadeInLeft">
+                        <article class="path-card d-flex bg-white ">
+                            <div
+                                class="path-tab d-flex align-items-center justify-content-center font-plus-jakarta-sans text-uppercase fw-medium bg-sixth">
+                                Foundation</div>
+                            <div class="path-body d-flex flex-column gap-3">
+                                <div class="path-head d-flex gap-2 align-items-center">
+                                    <span class="path-icon d-flex align-items-center justify-content-center "><i
+                                            class="bi bi-code-slash"></i></span>
+                                    <h3 class="text-seventh font-outfit fw-bold path-title mb-0">Frontend</h3>
+                                </div>
+                                <p class="path-text text-plus-jakarta-sans mb-0">Build clean, responsive interfaces and
+                                    learn how the web works from
+                                    the ground up.</p>
+                                <ul
+                                    class="list-unstyled d-flex align-items-center gap-2 font-plus-jakarta-sans fw-semibold ">
+                                    <li class="tag">HTML</li>
+                                    <li class="tag">CSS</li>
+                                    <li class="tag">JavaScript</li>
+                                    <li class="tag">React</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="row d-none d-lg-flex wow wow animate__animated animate__fadeInUp" data-anim="fadeInUp"
+                    delay="0.1s">
+                    <div class="col-lg-4 offset-lg-5">
+                        <div class="connector connector--right"></div>
+                    </div>
+                </div>
+
+                <!-- 2. Backend -->
+                <div class="row wow animate__animated animate__fadeInUp" data-anim="fadeInUp" delay="0.1s">
+                    <div class="col-lg-5 offset-lg-7 " data-animate="animate__fadeInRight">
+                        <article class="path-card d-flex bg-white ">
+                            <div
+                                class="path-tab d-flex align-items-center justify-content-center font-plus-jakarta-sans text-uppercase fw-medium path-tab--navy">
+                                Logic
+                            </div>
+                            <div class="path-body d-flex flex-column gap-3">
+                                <div class="path-head d-flex gap-2 align-items-center">
+                                    <span class="path-icon d-flex align-items-center justify-content-center "><i
+                                            class="bi bi-hdd-stack"></i></span>
+                                    <h3 class="text-seventh font-outfit fw-bold path-title mb-0">Backend</h3>
+                                </div>
+                                <p class="path-text text-plus-jakarta-sans mb-0">Create fast server-side applications,
+                                    routes, and APIs that power
+                                    real products.</p>
+                                <ul
+                                    class="list-unstyled d-flex align-items-center gap-2 font-plus-jakarta-sans fw-semibold ">
+                                    <li class="tag">Node.js</li>
+                                    <li class="tag">Express.js</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="row d-none d-lg-flex wow animate__animated animate__fadeInUp" data-anim="fadeInUp"
+                    delay="0.1s">
+                    <div class="col-lg-4 offset-lg-3">
+                        <div class="connector connector--left"></div>
+                    </div>
+                </div>
+
+                <!-- 3. Database -->
+                <div class="row wow animate__animated animate__fadeInUp" data-anim="fadeInUp" delay="0.1s">
+                    <div class="col-lg-5 " data-animate="animate__fadeInLeft">
+                        <article class="path-card d-flex bg-white ">
+                            <div
+                                class="path-tab d-flex align-items-center justify-content-center font-plus-jakarta-sans text-uppercase fw-medium path-tab--navy">
+                                Data
+                            </div>
+                            <div class="path-body d-flex flex-column gap-3">
+                                <div class="path-head d-flex gap-2 align-items-center">
+                                    <span class="path-icon d-flex align-items-center justify-content-center "><i
+                                            class="bi bi-database"></i></span>
+                                    <h3 class="text-seventh font-outfit fw-bold path-title mb-0">Database</h3>
+                                </div>
+                                <p class="path-text text-plus-jakarta-sans mb-0">Model, store, and retrieve application
+                                    data
+                                    with a modern document
+                                    database.</p>
+                                <ul
+                                    class="list-unstyled d-flex align-items-center gap-2 font-plus-jakarta-sans fw-semibold ">
+                                    <li class="tag">MongoDB</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="row d-none d-lg-flex wow animate__animated animate__fadeInUp" data-anim="fadeInUp"
+                    delay="0.1s">
+                    <div class="col-lg-4 offset-lg-5">
+                        <div class="connector connector--right"></div>
+                    </div>
+                </div>
+
+                <!-- 4. Projects -->
+                <div class="row wow animate__animated animate__fadeInUp" data-anim="fadeInUp" delay="0.1s">
+                    <div class="col-lg-5 offset-lg-7 " data-animate="animate__fadeInRight">
+                        <article class="path-card d-flex bg-white ">
+                            <div
+                                class="path-tab d-flex align-items-center justify-content-center font-plus-jakarta-sans text-uppercase fw-medium bg-sixth">
+                                Portfolio</div>
+                            <div class="path-body d-flex flex-column gap-3">
+                                <div class="path-head d-flex gap-2 align-items-center">
+                                    <span class="path-icon d-flex align-items-center justify-content-center "><i
+                                            class="bi bi-stars"></i></span>
+                                    <h3 class="text-seventh font-outfit fw-bold path-title mb-0">Projects</h3>
+                                </div>
+                                <p class="path-text text-plus-jakarta-sans mb-0">Bring every skill together in polished
+                                    projects made to be shared
+                                    and showcased.</p>
+                                <ul
+                                    class="list-unstyled d-flex align-items-center gap-2 font-plus-jakarta-sans fw-semibold ">
+                                    <li class="tag">Learn</li>
+                                    <li class="tag">Build</li>
+                                    <li class="tag">Showcase</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid standard-container program-container">
+            <div class="container">
+                <div class="row d-flex flex-column align-items-center justify-content-center ">
+                    <div class="max-w-1024 d-flex flex-column course-gap">
+                        <h2 class="text-center text-white font-outfit fw-bold program-head ls--1 wow animate__animated animate__fadeInUp"
+                            data-anim="fadeInUp" delay="0.1s" data-animate="animate__fadeIn">Your program at a
+                            glance
+                        </h2>
+                        <div class="course-wrap wow animate__animated animate__fadeInUp" data-anim="fadeInUp"
+                            delay="0.1s">
+                            <div class="course-card " data-animate="animate__fadeIn">
+                                <div class="course-media d-grid overflow-hidden h-100">
+                                    <img src="./images/course-img.webp" class="h-100 w-100 object-fit-cover"
+                                        alt="Student coding on a laptop">
+                                    <span class="media-badge text-white">
+                                        <span class="dot text-white font-plus-jakarta-sans"></span>Chennai
+                                        Labs &amp;
+                                        Live Online
+                                    </span>
+                                </div>
+                                <div class="course-body d-flex flex-column gap-3 gap-md-4">
+                                    <div class="">
+                                        <h3 class="course-title  text-white font-outfit fw-bold ls--1"
+                                            data-animate="animate__fadeInRight">Full Stack
+                                            Developer
+                                            Course :</h3>
+                                        <p class="course-tech  text-sixth fw-semibold ls-1 font-outfit "
+                                            data-animate="animate__fadeInRight" data-delay="100">
+                                            HTML <span>|</span> CSS <span>|</span> JavaScript <span>|</span> React
+                                            <span>|</span> Node.js <span>|</span> MongoDB
+                                        </p>
+                                    </div>
+                                    <div class="info-grid mb-md-3">
+                                        <div class="info-tile  d-flex align-items-center gap-3 h-100"
+                                            data-animate="animate__fadeInUp" data-delay="200">
+                                            <span
+                                                class="info-icon d-flex align-items-center justify-content-center flex-shrink-0"><i
+                                                    class="bi bi-clock"></i></span>
+                                            <div>
+                                                <h4 class="info-value mb-0 text-white font-outfit fw-bold ">4–5 Months
+                                                </h4>
+                                                <p
+                                                    class="info-label mb-0 font-plus-jakarta-sans fw-medium text-quinary">
+                                                    Duration</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-tile  d-flex align-items-center gap-3 h-100"
+                                            data-animate="animate__fadeInUp" data-delay="300">
+                                            <span
+                                                class="info-icon d-flex align-items-center justify-content-center flex-shrink-0"><i
+                                                    class="bi bi-display"></i></span>
+                                            <div>
+                                                <h4 class="info-value mb-0 text-white font-outfit fw-bold ">Classroom +
+                                                    Live
+                                                    Online</h4>
+                                                <p
+                                                    class="info-label mb-0 font-plus-jakarta-sans fw-medium text-quinary">
+                                                    Learning
+                                                    Modes</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-tile  d-flex align-items-center gap-3 h-100"
+                                            data-animate="animate__fadeInUp" data-delay="400">
+                                            <span
+                                                class="info-icon d-flex align-items-center justify-content-center flex-shrink-0"><i
+                                                    class="bi bi-people"></i></span>
+                                            <div>
+                                                <h4 class="info-value mb-0 text-white font-outfit fw-bold ">Freshers +
+                                                    Career
+                                                    Switchers</h4>
+                                                <p
+                                                    class="info-label mb-0 font-plus-jakarta-sans fw-medium text-quinary">
+                                                    Who Can Join
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="info-tile  d-flex align-items-center gap-3 h-100"
+                                            data-animate="animate__fadeInUp" data-delay="500">
+                                            <span
+                                                class="info-icon d-flex align-items-center justify-content-center flex-shrink-0"><i
+                                                    class="bi bi-layers"></i></span>
+                                            <div>
+                                                <h4 class="info-value mb-0 text-white font-outfit fw-bold ">Hands-On +
+                                                    Real
+                                                    Projects</h4>
+                                                <p
+                                                    class="info-label mb-0 font-plus-jakarta-sans fw-medium text-quinary">
+                                                    Training
+                                                    Approach</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- CTA Section -->
+                                    <div class="course-cta d-flex align-items-center justify-content-center justify-content-md-between flex-column flex-md-row gap-3 gap-md-2 pt-3 "
+                                        data-animate="animate__fadeIn" data-delay="600">
+                                        <a href="#admissionform"
+                                            class="w-100 btn-explore d-flex align-items-center justify-content-center gap-2 text-sixth text-center font-plus-jakarta-sans fw-bold text-decoration-none">
+                                            Explore Course <i class="bi bi-arrow-right"></i></a>
+                                        <span
+                                            class="course-note info-label mb-0 font-plus-jakarta-sans fw-medium text-quinary d-flex gap-2 align-items-center">
+                                            <span class="dot"></span>Free Demo & Project Syllabus Included
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container standard-container">
+            <div class="row">
+                <div class="d-flex flex-column testimonals-gap">
+                    <h2 class="text-center font-outfit fw-bold program-head ls--1 text-decoration-underline text-secondary wow animate__animated animate__fadeInUp"
+                        data-anim="fadeInUp" delay="0.1s">
+                        Real
+                        students. Real
+                        experiences. </h2>
+                    <div class="d-flex flex-column gap-3 gap-md-4">
+                        <div class="featured d-flex flex-column align-items-center gap-3 gap-md-4 overflow-hidden wow animate__animated animate__fadeInUp"
+                            id="featured">
+                            <div class="stars text-sixth gap-1 d-flex" aria-label="5 stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="featured-text text-center font-plus-jakarta-sans max-w-900 mx-auto text-secondary"
+                                id="featuredText">
+                                The learning environment is very nice, and the training was well structured. I had a
+                                good experience with Oranium Tech. The trainer, Muthukumar sir, is approachable and
+                                explained the concepts clearly, even in online classes. Overall, it was a useful
+                                experience for improving my technical skills.
+                            </p>
+                            <div class="person d-flex gap-3 align-items-start align-items-md-center">
+                                <!-- <img class="avatar" id="featuredImg" src="images/Vector.webp" alt=""> -->
+                                <span
+                                    class="featured-text text-center font-plus-jakarta-sans max-w-900 mx-auto text-secondary"
+                                    id="featuredName">Kowsalya J</span>
+                            </div>
+                        </div>
+                        <div class="wow animate__animated animate__fadeInUp">
+                            <div class="swiper reviews-slider" id="reviewsSlider">
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide">
+                                        <article class="t-card d-flex flex-column ">
+                                            <p class="t-text text-secondary font-plus-jakarta-sans mb-0">The learning
+                                                environment is very nice, and the training was well structured. I had a
+                                                good experience with Oranium Tech. The trainer, Muthukumar sir, is
+                                                approachable and explained the concepts clearly, even in online classes.
+                                                Overall, it was a useful experience for improving my technical skills.
+                                            </p>
+                                            <div
+                                                class="t-footer d-flex  gap-2 align-items-start justify-content-between flex-column flex-md-row">
+                                                <div
+                                                    class="d-flex gap-2 gap-md-3 align-items-start align-items-md-center">
+                                                    <span class="person-name">Kowsalya J</span>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <article class="t-card d-flex flex-column ">
+                                            <p class="t-text text-secondary font-plus-jakarta-sans">It's a good academy.
+                                                All the courses are affordable compared to others, and the staff are
+                                                also good and friendly (I finished full stack in this institute), and
+                                                the staff explain questions with real-time examples
+                                            </p>
+                                            <div
+                                                class="t-footer d-flex  gap-2 align-items-start justify-content-between flex-column flex-md-row">
+                                                <div
+                                                    class="d-flex gap-2 gap-md-3 align-items-start align-items-md-center">
+                                                    <span class="person-name">J.paramesh VLN </span>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <article class="t-card d-flex flex-column ">
+                                            <p class="t-text text-secondary font-plus-jakarta-sans">The instructor's
+                                                teaching was good, with many examples... and good for beginners...
+                                                actually, I'm not from a computer science background, but the instructor
+                                                taught me according to my level...with comfortable class timings and
+                                                continuous follow-ups.
+                                            </p>
+                                            <div
+                                                class="t-footer d-flex gap-2 align-items-start justify-content-between flex-column flex-md-row">
+                                                <div
+                                                    class="d-flex gap-2 gap-md-3 align-items-start align-items-md-center">
+                                                    <span class="person-name">jackquline blue</span>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <article class="t-card d-flex flex-column ">
+                                            <p class="t-text text-secondary font-plus-jakarta-sans">I had a wonderful
+                                                experience with Oranium Tech. I have recently completed my Software
+                                                Testing course. My trainer, Ms. Reshmi, taught the whole session very
+                                                clearly and made it easy to understand. She also explained it with
+                                                practical examples.</p>
+                                            <div
+                                                class="t-footer d-flex gap-2 align-items-start justify-content-between flex-column flex-md-row">
+                                                <div
+                                                    class="d-flex gap-2 gap-md-3 align-items-start align-items-md-center">
+                                                    <span class="person-name">S.Thilagavathy Vinoth</span>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <article class="t-card d-flex flex-column ">
+                                            <p class="t-text text-secondary font-plus-jakarta-sans">I want to express my
+                                                sincere gratitude to Reshmi Madam and Muthukumar Sir for their
+                                                outstanding and in-depth instruction. It was a fantastic learning
+                                                experience. For someone with a non-IT background, this institute far
+                                                exceeded my expectations.</p>
+                                            <div
+                                                class="t-footer d-flex gap-2 align-items-start justify-content-between flex-column flex-md-row">
+                                                <div
+                                                    class="d-flex gap-2 gap-md-3 align-items-start align-items-md-center">
+                                                    <span class="person-name">KARTHIK P
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="t-card d-flex flex-column ">
+                                            <p class="t-text text-secondary font-plus-jakarta-sans">Oranium Tech
+                                                Institute guided me well throughout my learning journey. Their support,
+                                                training, and interview guidance helped me gain confidence and get a job
+                                                opportunity. Thank you to the trainers and team for the valuable
+                                                support.</p>
+                                            <div
+                                                class="t-footer d-flex gap-2 align-items-start justify-content-between flex-column flex-md-row">
+                                                <div
+                                                    class="d-flex gap-2 gap-md-3 align-items-start align-items-md-center">
+                                                    <span class="person-name">NANDA S
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="reviews-dots swiper-pagination" id="reviewsDots"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid standard-container bg-nine">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-6 d-flex">
+                        <div class="cert-wrap position-relative reveal-left wow animate__animated animate__fadeInLeft w-100 d-flex align-items-center"
+                            data-wow-delay="0.1s">
+                            <span
+                                class="pill-tag pill-top position-absolute align-items-center gap-2 font-plus-jakarta-sans">
+                                <i class="dot"></i>Verifiable certificate ID
+                            </span>
+                            <div class="cert-card w-100" id="certCard">
+                                <img src="./images/Certificate image.webp" class="w-100 object-fit-cover"
+                                    alt="Certificate">
+                            </div>
+                            <span
+                                class="pill-tag pill-bottom position-absolute align-items-center gap-2 font-plus-jakarta-sans">
+                                <i class="dot"></i>Signed &amp; dated on completion
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="d-flex flex-column gap-3 gap-md-4 wow animate__animated animate__fadeInRight"
+                            data-wow-delay="0.1s">
+                            <span
+                                class="badge-cert d-flex align-items-center gap-2 w-fit-content text-sixth font-plus-jakarta-sans text-uppercase fw-bold ls-1"
+                                data-animate="animate__fadeInUp"><i class="dot bg-sixth"></i>GET
+                                CERTIFIED</span>
+
+                            <h2 class="certificate-title text-white font-outfit fw-bold ls--1 mb-0"
+                                data-animate="animate__fadeInUp">
+                                Build skills. Showcase your work. <span class="grad">Get certified.</span>
+                            </h2>
+
+                            <p class="sub-line font-outfit fw-semibold mb-0" data-animate="animate__fadeInUp">
+                                Oranium Tech Full Stack Developer
+                                Certification
+                            </p>
+
+                            <div class="feature d-flex align-items-center " data-animate="animate__fadeInUp">
+                                <span class="ico"><img src="./images/Check.webp" width="34px" height="34px" /></span>
+                                <div>
+                                    <h3 class="text-white font-plus-jakarta-sans fw-semibold feature-h3 mb-0">Strong
+                                        Full
+                                        Stack
+                                        Foundation</h3>
+                                    <p class="feature-text font-jakarta-sans mb-0">Front-end to back-end fundamentals,
+                                        covered end to end.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature d-flex align-items-center  " data-animate="animate__fadeInUp">
+                                <span class="ico"><img src="./images/Check.webp" width="34px" height="34px" /></span>
+                                <div>
+                                    <h3 class="text-white font-plus-jakarta-sans fw-semibold feature-h3 mb-0">
+                                        Industry-Relevant Skills
+                                    </h3>
+                                    <p class="feature-text font-jakarta-sans mb-0">The tools and stacks hiring teams
+                                        actually ask for.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature d-flex align-items-center  " data-animate="animate__fadeInUp">
+                                <span class="ico"><img src="./images/Check.webp" width="34px" height="34px" /></span>
+                                <div>
+                                    <h3 class="text-white font-plus-jakarta-sans fw-semibold feature-h3 mb-0">Hands-On
+                                        Project
+                                        Experience</h3>
+                                    <p class="feature-text font-jakarta-sans mb-0">Real projects you can walk an
+                                        interviewer
+                                        through.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-3 " data-animate="animate__fadeInUp">
+                                <a href="#admissionform"
+                                    class="btn-demo2 text-white font-plus-jakarta-sans text-decoration-none">BOOK
+                                    A FREE DEMO <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container-fluid footer-container position-relative">
+            <div class="dots-bg"></div>
+            <div class="container">
+                <div class="d-flex flex-column gap-3 footer-content position-relative w-100 mx-auto"
+                    data-animate="animate__fadeInUp">
+                    <h2 class="mb-0 font-outfit text-white text-center text-uppercase fw-bold foot-h2 wow animate__animated animate__fadeInUp"
+                        data-wow-delay="0.1s">
+                        READY TO START
+                        YOUR TECH
+                        JOURNEY?</h2>
+                    <p class="pb-2 mb-0 text-center font-plus-jakarta-sans footer-subpara fw-normal  wow animate__animated animate__fadeInUp"
+                        data-wow-delay="0.1s">
+                        Build practical
+                        Full Stack
+                        skills
+                        with Oranium
+                        Tech.</p>
+                    <a href="#admissionform"
+                        class="mb-0 text-center btn-foot-cta text-uppercase fw-bold font-plus-jakarta-sans border-0 w-fit-content mx-auto text-decoration-none  wow animate__animated animate__fadeInUp"
+                        data-wow-delay="0.1s">BOOK
+                        A
+                        FREE DEMO</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid footer-bottom-container">
+            <div class="container">
+                <div
+                    class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-between gap-2 gap-md-3 font-plus-jakarta-sans footer-bottom">
+                    <div
+                        class="d-flex flex-column flex-md-row align-items-center align-items-md-start gap-2 text-footer-copyright">
+                        <span class="text-white fw-bold"> Oranium Tech</span> <span
+                            class="d-none d-md-block">·</span><span class="text-center">Full Stack Developer
+                            Training & Career
+                            Advancement
+                            Chennai</span>
+                    </div>
+                    <span class="text-footer-copyright">Design and Developed By Mediagarh</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Replace with your Web App URL after redeploying
+            const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzTi1o26kc2HYlutQJSiOEWeUKC6BT4KdnmxGHuX-qom8m1NEY7gnROXstUz_-UTkMOMw/exec";
+
+            const form = document.getElementById("admissionform");
+            const submitBtn = document.getElementById("submitBtn");
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                submitBtn.disabled = true;
+                submitBtn.innerText = "Submitting...";
+
+                // Populate hidden inputs
+                document.getElementById("formDate").value = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+                document.getElementById("formPageUrl").value = window.location.href;
+
+                const formData = new FormData(form);
+                const searchParams = new URLSearchParams(formData);
+
+                fetch(SCRIPT_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: searchParams
+                })
+                    .then(() => {
+                        window.location.href = "thankyou.html";
+                        form.reset();
+                    })
+                    .catch(error => {
+                        console.error("Submission Error:", error);
+                        alert("Something went wrong. Please try again.");
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = "Submit Application";
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>

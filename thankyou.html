@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thankyou |Oranium Tech</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K4L28Z9R');</script>
+    <style>
+        /* Theme variables (same as your style.css; remove this block if style.css is already linked) */
+        :root {
+            --primary-color: #1D4777;
+            --secondary-color: #102B4C;
+            --tertiary-color: #E2E8F0;
+            --quinary-color: #90A1B9;
+            --quatery-color: #CAD5E2;
+            --sixth-color: #F47921;
+            --seventh-color: #171816;
+            --eighth-color: #555850;
+            --nine-color: #101217;
+            --purple-color: #5025D1;
+            --purple-shad-color: #7C86FF;
+            --transition: 0.35s ease;
+        }
+
+        /* ===== Thank-you page ===== */
+        .ty-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Header */
+        .ty-header {
+            background: var(--secondary-color);
+            padding: 20px 0;
+        }
+
+        .ty-logo {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 14px;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .ty-logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        /* Main */
+        .ty-main {
+            position: relative;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(244, 121, 33, .10), transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(29, 71, 119, .14), transparent 45%),
+                var(--tertiary-color);
+            overflow: hidden;
+        }
+
+        /* Soft floating shapes */
+        .ty-main::before,
+        .ty-main::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(50px);
+            pointer-events: none;
+            animation: tyFloat 8s ease-in-out infinite;
+        }
+
+        .ty-main::before {
+            width: 220px;
+            height: 220px;
+            top: 8%;
+            left: -60px;
+            background: rgba(244, 121, 33, .18);
+        }
+
+        .ty-main::after {
+            width: 260px;
+            height: 260px;
+            bottom: 5%;
+            right: -80px;
+            background: rgba(80, 37, 209, .12);
+            animation-delay: -4s;
+        }
+
+        .ty-card {
+            position: relative;
+            z-index: 1;
+            max-width: 540px;
+            margin-inline: auto;
+            padding: 52px 40px;
+            border-radius: 18px;
+            background: #fff;
+            text-align: center;
+            border: 1px solid rgba(29, 71, 119, .08);
+            box-shadow: 0 24px 50px -14px rgba(16, 43, 76, .22);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .ty-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px -14px rgba(16, 43, 76, .28);
+        }
+
+        /* Check icon */
+        .ty-check {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 78px;
+            height: 78px;
+            margin: 0 auto 26px;
+            border-radius: 50%;
+            background: rgba(244, 121, 33, .10);
+            border: 1px solid rgba(244, 121, 33, .35);
+            color: var(--sixth-color);
+            font-size: 34px;
+        }
+
+        .ty-check::after {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: 50%;
+            border: 1px solid var(--sixth-color);
+            animation: tyRing 2.4s ease-out infinite;
+        }
+
+        /* Badge */
+        .ty-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(29, 71, 119, .07);
+            border: 1px solid rgba(29, 71, 119, .2);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--primary-color);
+        }
+
+        .ty-badge::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--sixth-color);
+            animation: tyPing 2s infinite;
+        }
+
+        /* Title */
+        .ty-title {
+            margin: 22px 0 18px;
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(30px, 5vw, 42px);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            color: var(--secondary-color);
+        }
+
+        .ty-title span {
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--sixth-color) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--primary-color);
+            /* fallback */
+        }
+
+        .ty-divider {
+            width: 48px;
+            height: 4px;
+            margin: 0 auto 26px;
+            border-radius: 4px;
+            background: var(--sixth-color);
+        }
+
+        .ty-text {
+            margin: 0 0 32px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--eighth-color);
+        }
+
+        /* Button */
+        .ty-btn {
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 8px;
+            background: var(--sixth-color);
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 10px 22px -6px rgba(244, 121, 33, .55);
+            transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+        }
+
+        .ty-btn i {
+            transition: transform var(--transition);
+        }
+
+        .ty-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .45), transparent);
+            transform: skewX(-20deg);
+            transition: left .6s ease;
+        }
+
+        .ty-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 26px -8px rgba(29, 71, 119, .55);
+        }
+
+        .ty-btn:hover::before {
+            left: 140%;
+        }
+
+        .ty-btn:hover i {
+            transform: translateX(-4px);
+        }
+
+        .ty-btn:focus-visible {
+            outline: 3px solid var(--purple-shad-color);
+            outline-offset: 3px;
+        }
+
+        /* Footer */
+        .ty-footer {
+            padding: 36px 0 28px;
+            background: var(--nine-color);
+            border-top: 2px solid var(--sixth-color);
+            text-align: center;
+        }
+
+        .ty-copy {
+            margin: 18px 0 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12px;
+            color: rgba(255, 255, 255, .45);
+        }
+
+        /* Keyframes */
+        @keyframes tyFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-24px);
+            }
+        }
+
+        @keyframes tyRing {
+            0% {
+                transform: scale(1);
+                opacity: .7;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes tyPing {
+            0% {
+                box-shadow: 0 0 0 0 rgba(244, 121, 33, .6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 7px rgba(244, 121, 33, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(244, 121, 33, 0);
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .ty-main {
+                padding: 36px 0;
+            }
+
+            .ty-card {
+                padding: 36px 22px;
+                border-radius: 14px;
+            }
+
+            .ty-check {
+                width: 68px;
+                height: 68px;
+                font-size: 30px;
+            }
+
+            .ty-logo img {
+                height: 34px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .animate__animated,
+            .ty-main::before,
+            .ty-main::after,
+            .ty-check::after,
+            .ty-badge::before {
+                animation: none !important;
+            }
+        }
+    </style>
+
+    <!-- Add your Oranium Tech Google Tag Manager / tracking code here -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4L28Z9R" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Add your Oranium Tech Google Tag Manager (noscript) code here -->
+
+    <div class="ty-page">
+
+        <!-- Header -->
+        <header class="ty-header text-center">
+            <div class="container">
+                <a href="/" class="ty-logo" aria-label="Oranium Tech home">
+                    <img src="./images/Container.webp" alt="Oranium Tech">
+                </a>
+            </div>
+        </header>
+
+        <!-- Thank-you card -->
+        <main class="ty-main">
+            <div class="container px-3">
+                <div class="ty-card animate__animated animate__fadeInUp">
+
+                    <div class="ty-check animate__animated animate__zoomIn" style="animation-delay:.3s">
+                        <i class="bi bi-check-lg"></i>
+                    </div>
+
+                    <span class="ty-badge animate__animated animate__fadeIn" style="animation-delay:.5s">Submission
+                        Received</span>
+
+                    <h1 class="ty-title animate__animated animate__fadeInUp" style="animation-delay:.6s">
+                        Thank You for<br><span>Reaching Out!</span>
+                    </h1>
+
+                    <div class="ty-divider animate__animated animate__fadeIn" style="animation-delay:.75s"></div>
+
+                    <p class="ty-text animate__animated animate__fadeInUp" style="animation-delay:.85s">
+                        Thank you for your interest in Oranium Tech.<br class="d-none d-md-block">
+                        Our counsellor will contact you shortly to guide you through the next steps.<br
+                            class="d-none d-md-block">
+                        Explore our courses and programmes in the meantime.
+                    </p>
+
+                    <!-- <a href="/" class="ty-btn animate__animated animate__fadeInUp" style="animation-delay:1s">
+                        <i class="bi bi-arrow-left"></i> Back to Home
+                    </a> -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="ty-footer">
+            <div class="container">
+                <span class="ty-logo">
+                    <img src="./images/Container.webp" alt="Oranium Tech">
+                </span>
+                <p class="ty-copy">&copy; <span id="tyYear">2026</span> Oranium Tech. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>document.getElementById('tyYear').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
