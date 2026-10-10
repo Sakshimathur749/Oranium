@@ -104,6 +104,10 @@ body {
     color: #70746B !important;
 }
 
+.text-training {
+    color: #4E4E4E !important
+}
+
 .bg-purple {
     background-color: var(--purple-color) !important;
 }
@@ -120,6 +124,10 @@ body {
     background-color: var(--nine-color) !important;
 }
 
+.faq-bg {
+    background-color: #101010 !important;
+}
+
 .standard-container {
     padding: 80px 0;
 }
@@ -130,6 +138,10 @@ body {
 
 .max-w-900 {
     max-width: 900px !important;
+}
+
+.max-w-600 {
+    max-width: 600px !important;
 }
 
 .nav-container {
@@ -252,7 +264,9 @@ body {
 .learn-gap,
 .course-gap,
 .testimonals-gap,
-.why-left-gap {
+.why-left-gap,
+.training-gap,
+.faq-container {
     gap: 50px
 }
 
@@ -261,7 +275,7 @@ body {
 }
 
 .hero-content {
-    padding: 26px 60px;
+    padding: 26px 14px;
 }
 
 .hero-badge {
@@ -484,9 +498,14 @@ body {
 }
 
 .path-title,
-.course-title {
+.course-title,
+.training-title {
     font-size: 23.2px;
     line-height: 34.8px;
+}
+
+.path-title,
+.course-title {
     letter-spacing: -0.812px;
 }
 
@@ -779,12 +798,19 @@ body {
 }
 
 .certificate-title,
-.foot-h2 {
+.foot-h2,
+.training-head {
     font-size: 42px;
     line-height: 48.3px;
 }
 
-.sub-line {
+.faq-head {
+    font-size: 48px;
+    line-height: 48px;
+}
+
+.sub-line,
+.faq-accordion .accordion-button {
     color: #CAD5E2;
     font-size: 18px;
     line-height: 28px;
@@ -894,6 +920,10 @@ body {
 
 .footer-subpara {
     color: #CAD5E2;
+}
+
+.footer-subpara,
+.training-list {
     font-size: 18px;
     line-height: 32.5px;
 }
@@ -1092,8 +1122,102 @@ body {
     background-color: #25D366;
 }
 
+.training-card {
+    border: 2px solid #18427680;
+    background: #1842760D;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.training-card-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    padding: 32px;
+    border-radius: 20px;
+}
+
+.image-box {
+    border-radius: 20px;
+}
+
+li::marker {
+    color: #9B34FC !important;
+    font-size: 24px !important;
+    border-radius: 4px !important;
+}
+
+.training-list {
+    padding: 20px 0px 10px 20px;
+    border-bottom: 1px solid #2D2D2D
+}
+
+.faq-accordion .accordion-item {
+    background: #FFFFFF0A;
+    border: 0.8px solid #FFFFFF12;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.faq-accordion .accordion-button {
+    background: transparent;
+    padding: 24px;
+    box-shadow: none;
+    gap: 12px;
+}
+
+.faq-accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.faq-accordion .accordion-button::after {
+    content: "";
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    margin-left: auto;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23999999' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    border: 1px solid #FFFFFF33;
+    border-radius: 50%;
+    transition: transform .2s ease;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='18 15 12 9 6 15'/%3E%3C/svg%3E");
+    background-color: transparent;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='18 15 12 9 6 15'/%3E%3C/svg%3E"),
+        linear-gradient(135deg, #6b7fa8 0%, #d9703a 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px, 100% 100%;
+    border: none;
+    transform: none;
+}
+
+.faq-accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
+    background: linear-gradient(135deg, #000000 0%, #184276 100%);
+    border: 0.8px solid #184276;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    background: transparent;
+    color: #ffffff;
+}
+
+.faq-accordion .accordion-body {
+    color: #99A1AF;
+    font-size: 14px;
+    line-height: 22.75px;
+    padding: 0 24px 24px;
+}
+
 /* Responsive adjustment for mobile screens */
 @media (max-width: 576px) {
+
     .floating-actions {
         bottom: 15px;
         right: 15px;
@@ -1117,6 +1241,13 @@ body {
 }
 
 @media (max-width:768px) {
+    .faq-accordion .accordion-body {
+        padding: 0 18px 18px;
+    }
+
+    .faq-accordion .accordion-button {
+        padding: 18px;
+    }
 
     #featured::before,
     #featured::after {
@@ -1132,11 +1263,13 @@ body {
         padding: 40px 16px;
     }
 
-    .hero-content {
+    .hero-content,
+    .training-list {
         padding: 12px 0;
     }
 
-    .course-body {
+    .course-body,
+    .training-card-content {
         padding: 20px;
     }
 
@@ -1145,7 +1278,9 @@ body {
     .why-row-gap,
     .learn-gap,
     .course-gap,
-    .testimonals-gap {
+    .testimonals-gap,
+    .training-gap,
+    .faq-container {
         gap: 40px;
     }
 
@@ -1200,7 +1335,8 @@ body {
     .hero-title,
     .certificate-title,
     .foot-h2,
-    .program-head {
+    .program-head,
+    .faq-head {
         font-size: 36px;
         line-height: 40px;
     }
@@ -1210,16 +1346,24 @@ body {
         line-height: 32px;
     }
 
+    .training-title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
     .path-title,
-    .course-title {
-        font-size: 20px;
+    .course-title,
+    li::marker {
+        font-size: 20px !important;
         line-height: 28px;
     }
 
     .hero-text,
     .feature-head,
     .btn-demo i,
-    .sub-line {
+    .sub-line,
+    .training-list,
+    .faq-accordion .accordion-button {
         font-size: 16px;
         line-height: 24px;
     }
@@ -1235,7 +1379,17 @@ body {
         gap: 16px;
     }
 
+    .training-card-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 28px;
+    }
+
     #featured {
         padding: 30px;
+    }
+
+    .training-head {
+        font-size: 34px;
+        line-height: 40px;
     }
 }
