@@ -128,6 +128,22 @@
                                         pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
                                         name="Phone" placeholder="10-digit mobile number" required>
                                 </div>
+                                <!-- Captcha -->
+                                <div class="mb-3">
+                                    <label for="captchaInput"
+                                        class="form-label fs-7 fw-semibold">Captcha<span>*</span></label>
+                                    <div class="d-flex align-items-center gap-2 mb-2">
+                                        <canvas id="captchaCanvas" width="160" height="50"
+                                            class="rounded border"></canvas>
+                                        <button type="button" id="refreshCaptcha"
+                                            class="btn btn-outline-secondary btn-sm"
+                                            aria-label="Refresh captcha">&#x21bb;</button>
+                                    </div>
+                                    <input type="text" class="form-control form-input" id="captchaInput"
+                                        placeholder="Enter the characters shown" autocomplete="off" required>
+                                    <div id="captchaError" class="text-danger small mt-1 d-none">Incorrect captcha.
+                                        Please try again.</div>
+                                </div>
                                 <!-- Hidden Fields for Date & Page URL -->
                                 <input type="hidden" id="formDate" name="Date">
                                 <input type="hidden" id="formPageUrl" name="PageUrl">
@@ -1087,16 +1103,104 @@
         document.addEventListener("DOMContentLoaded", () => {
             // Replace with your Web App URL after redeploying
             const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzTi1o26kc2HYlutQJSiOEWeUKC6BT4KdnmxGHuX-qom8m1NEY7gnROXstUz_-UTkMOMw/exec";
-
             const form = document.getElementById("admissionform");
             const submitBtn = document.getElementById("submitBtn");
+            const canvas = document.getElementById("captchaCanvas");
+            const ctx = canvas.getContext("2d");
+            const captchaInput = document.getElementById("captchaInput");
+            const captchaError = document.getElementById("captchaError");
+            let captchaCode = "";
+
+            // Uppercase + lowercase + numbers (milte-julte characters hata diye gaye hain)
+            const CHARS = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
+
+            function generateCaptcha() {
+                captchaCode = "";
+                for (let i = 0; i < 5; i++) {
+                    captchaCode += CHARS.charAt(Math.floor(Math.random() * CHARS.length));
+                }
+                drawCaptcha();
+                captchaInput.value = "";
+            }
+
+            function drawCaptcha() {
+                const w = canvas.width;
+                const h = canvas.height;
+
+                ctx.clearRect(0, 0, w, h);
+                ctx.fillStyle = "#f1f3f5";
+                ctx.fillRect(0, 0, w, h);
+
+                // Noise lines
+                for (let i = 0; i < 6; i++) {
+                    ctx.strokeStyle = `hsl(${Math.random() * 360}, 40%, 60%)`;
+                    ctx.lineWidth = 1 + Math.random();
+                    ctx.beginPath();
+                    ctx.moveTo(Math.random() * w, Math.random() * h);
+                    ctx.lineTo(Math.random() * w, Math.random() * h);
+                    ctx.stroke();
+                }
+
+                // Noise dots
+                for (let i = 0; i < 40; i++) {
+                    ctx.fillStyle = `rgba(0,0,0,${Math.random() * 0.4})`;
+                    ctx.beginPath();
+                    ctx.arc(Math.random() * w, Math.random() * h, 1, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+
+                // Characters
+                const gap = w / (captchaCode.length + 1);
+                for (let i = 0; i < captchaCode.length; i++) {
+                    ctx.save();
+                    ctx.translate(gap * (i + 1), h / 2 + (Math.random() * 10 - 5));
+                    ctx.rotate((Math.random() - 0.5) * 0.6);
+                    ctx.font = `bold ${26 + Math.floor(Math.random() * 6)}px Arial`;
+                    ctx.fillStyle = `hsl(${Math.random() * 360}, 60%, 30%)`;
+                    ctx.textAlign = "center";
+                    ctx.textBaseline = "middle";
+                    ctx.fillText(captchaCode[i], 0, 0);
+                    ctx.restore();
+                }
+            }
+
+            // Refresh button: sirf yahin se naya captcha banega
+            document.getElementById("refreshCaptcha").addEventListener("click", () => {
+                captchaInput.setCustomValidity("");
+                captchaError.classList.add("d-none");
+                generateCaptcha();
+            });
+
+            // Typing shuru karte hi purana error hata do
+            captchaInput.addEventListener("input", () => {
+                captchaInput.setCustomValidity("");
+                captchaError.classList.add("d-none");
+            });
+
+            // Pehli baar captcha banao
+            generateCaptcha();
+
             form.addEventListener("submit", (e) => {
                 e.preventDefault();
+
+                // Case-sensitive check (toUpperCase hata diya)
+                if (captchaInput.value.trim() !== captchaCode) {
+                    captchaError.classList.remove("d-none");
+                    captchaInput.setCustomValidity("Incorrect captcha");
+                    captchaInput.reportValidity();
+                    captchaInput.focus();
+                    // Captcha reload nahi hoga, user wahi captcha dobara try karega
+                    return;
+                }
+
+                captchaInput.setCustomValidity("");
+                captchaError.classList.add("d-none");
+
                 submitBtn.disabled = true;
                 submitBtn.innerText = "Submitting...";
 
-                // Populate hidden inputs
-                document.getElementById("formDate").value = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+                document.getElementById("formDate").value =
+                    new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
                 document.getElementById("formPageUrl").value = window.location.href;
 
                 const formData = new FormData(form);
@@ -1111,14 +1215,15 @@
                     body: searchParams
                 })
                     .then(() => {
-                        window.location.href = "thankyou.html";
                         form.reset();
+                        window.location.href = "thankyou.html";
                     })
                     .catch(error => {
                         console.error("Submission Error:", error);
                         alert("Something went wrong. Please try again.");
                         submitBtn.disabled = false;
                         submitBtn.innerText = "Submit Application";
+                        // Network error par captcha wahi rehne diya, user dobara submit kar sakta hai
                     });
             });
         });

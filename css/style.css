@@ -331,6 +331,12 @@ body {
     border-radius: 2px;
 }
 
+.captcha-error {
+    color: #dc3545;
+    display: block;
+    margin-top: 4px;
+}
+
 .why-section {
     border-bottom: 1px solid #0F172B;
     background: #000 url('../images/why-bg.webp') no-repeat center center / cover;
